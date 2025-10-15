@@ -1,4 +1,4 @@
-import { MetricValue, SourceWeatherData, CurrentWeather, AggregatedCurrent, HourlyForecast, AggregatedHourlyForecast, DailyForecast, AggregatedDailyForecast } from '../types/weather.types';
+import { MetricValue, SourceWeatherData, AggregatedCurrent, HourlyForecast, AggregatedHourlyForecast, DailyForecast, AggregatedDailyForecast } from '../types/weather.types';
 
 // Calculate aggregated metric value with confidence scoring
 export const aggregateMetric = (values: (number | undefined)[]): MetricValue => {

@@ -28,7 +28,7 @@ const LoadingSkeleton: React.FC = () => {
 const AppContent: React.FC = () => {
   const { weatherData, loading, error, clearError, refreshWeather } = useWeather();
   const [darkMode, setDarkMode] = useState(false);
-  const [useFahrenheit, setUseFahrenheit] = useState(true);
+  const [useFahrenheit] = useState(true);
 
   useEffect(() => {
     // Check for saved theme preference

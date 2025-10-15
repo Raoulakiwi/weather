@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useWeather } from '../contexts/WeatherContext';
 import { format } from 'date-fns';
-import { celsiusToFahrenheit, degreesToCardinal } from '../utils/unitConversion';
+import { celsiusToFahrenheit } from '../utils/unitConversion';
 import SourceComparison from './SourceComparison';
 
 const CurrentWeather: React.FC = () => {

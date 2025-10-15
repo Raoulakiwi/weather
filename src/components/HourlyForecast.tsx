@@ -2,7 +2,7 @@ import React from 'react';
 import { useWeather } from '../contexts/WeatherContext';
 import { format } from 'date-fns';
 import { celsiusToFahrenheit } from '../utils/unitConversion';
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Area, AreaChart } from 'recharts';
+import { XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Area, AreaChart } from 'recharts';
 
 interface HourlyForecastProps {
   useFahrenheit?: boolean;
