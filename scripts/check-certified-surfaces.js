@@ -94,8 +94,10 @@ function parseMarkdownTables(content, sectionHints) {
       .map((c) => c.trim());
     if (cells.length < 2) continue;
 
-    // Skip placeholder rows
+    // Skip placeholder / example rows
     if (cells.some((c) => c.includes('*(none yet)*'))) continue;
+    if (cells[0]?.toLowerCase().includes('example flow')) continue;
+    if (cells.some((c) => c.includes('path/to/file'))) continue;
 
     // File column is usually last or second column in kernel tables
     for (const cell of cells) {
@@ -118,11 +120,7 @@ function loadCertifiedPaths() {
     for (const p of sections) {
       paths.set(p, { source: 'docs/WORKING_SURFACES.md', label: p });
     }
-    for (const p of extractPathsFromText(working)) {
-      if (!paths.has(p)) {
-        paths.set(p, { source: 'docs/WORKING_SURFACES.md', label: p });
-      }
-    }
+    // Do not scan prose outside tables — doc mentions checker script paths in backticks.
   }
 
   const golden = readIfExists('docs/GOLDEN_SURFACES.md');
