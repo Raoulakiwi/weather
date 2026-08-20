@@ -7,7 +7,9 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0"
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "check:certified": "node scripts/check-certified-surfaces.js",
+    "setup:hooks": "node scripts/setup-certified-hooks.js"
   },
   "dependencies": {
     "react": "^18.2.0",
@@ -37,4 +39,3 @@
     "vite": "^5.0.8"
   }
 }
-
