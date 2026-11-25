@@ -29,3 +29,6 @@ dist-ssr
 .env.production
 .vercel
 
+
+# Claude factory verification output (uploaded as CI artifacts)
+factory-proof/
